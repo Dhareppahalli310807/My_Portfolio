@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');
+:root {
+  --primary: #010026;
+  --secondary: #dc4492;
+}
+@tailwind base;
+* {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-align: y;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  background-color: #010026;
+  @apply text-white;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
